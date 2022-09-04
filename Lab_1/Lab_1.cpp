@@ -51,6 +51,7 @@ void change_vector(std::vector <Test> &objects_vect) {
 
     }
 
+
 int main()
 {
     srand(time(0));
@@ -92,11 +93,22 @@ int main()
     std::cin >> y;
 
     if (y) {
-        change_vector(objects_vect);
+        change_vector(objects_vect); 
     }
-    else {
-        return 0; 
-    }
+    
+
+        Test rad_1(3, 9);
+        Test rad_2(5, 16);
+
+        (rad_1 + rad_2).print_fields(); // obj + obj
+        
+
+        (rad_1 + 5).print_fields(); // obj + int
+
+        (5 + rad_2).print_fields(); // int + obj
+    
+
+
 
 }
 

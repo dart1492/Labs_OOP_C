@@ -41,9 +41,29 @@ public:
 	//Set first
 	void set_values(int first, int second);
 
+	int get_first() {
+		return this->first;
+	}
+
+	int get_second() {
+		return this->second;
+	}
+
+	
 	void print_fields();
 
 	bool check(int x);
 
+	Test operator + (Test second);
+
+	Test operator + (int second);
+
+	friend Test operator + (int, Test&);
+
 };
+
+
+
+
+
 
