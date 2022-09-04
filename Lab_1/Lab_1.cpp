@@ -97,15 +97,15 @@ int main()
     }
     
 
-        Test rad_1(3, 9);
-        Test rad_2(5, 16);
+            Test rad_1(3, 9);
+            Test rad_2(5, 16);
 
-        (rad_1 + rad_2).print_fields(); // obj + obj
+            (rad_1 + rad_2).print_fields(); // obj + obj
         
 
-        (rad_1 + 5).print_fields(); // obj + int
+            (rad_1 + 5).print_fields(); // obj + int
 
-        (5 + rad_2).print_fields(); // int + obj
+            (5 + rad_2).print_fields(); // int + obj
     
 
 

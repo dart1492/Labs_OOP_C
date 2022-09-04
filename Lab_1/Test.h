@@ -49,7 +49,6 @@ public:
 		return this->second;
 	}
 
-	
 	void print_fields();
 
 	bool check(int x);
