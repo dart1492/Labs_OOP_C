@@ -50,7 +50,6 @@ void change_vector(std::vector <Test> &objects_vect) {
 
  }
 
-
 int main()
 {
     srand(time(0));
@@ -59,12 +58,12 @@ int main()
 
     Test sec(0, 10);
 
-    std::cout << "First object:"; first.print_fields();
-    std::cout << "Second object:"; sec.print_fields();
+    std::cout << "Default constructor:"; first.print_fields();
+    std::cout << "Parametrized constructor:"; sec.print_fields();
 
     int x = 5;
     if (sec.check(x)) {
-        std::cout << x << " belongs to the Second object" << std::endl;
+        std::cout << "X = " << x << " belongs to the Second object" << std::endl;
     }
 
     std::vector  <Test> objects_vect;
@@ -73,7 +72,7 @@ int main()
     int second_arg;
 
     std::cout << "Vector, filled with randomly generated values:" << std::endl;
-    for (int i = 5; i < 20; i++) {
+    for (int i = 0; i < 10; i++) {
         
         first_arg = rand() % 100;
         second_arg = first_arg + (rand() % 100);
@@ -112,14 +111,6 @@ int main()
     rad_1++; // suffix increment
 
     rad_1.print_fields();
-
-     
-    
-
-    
-    
-
-
 
 }
 

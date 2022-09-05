@@ -37,6 +37,14 @@ void Test::set_second(int second) {
 	this->second_int = second;
 }
 
+int Test::get_first() {
+	return this->first_int;
+}
+
+int Test::get_second() {
+	return this->second_int;
+}
+
 void Test::print_fields() {
 	std::cout << this->first_int << " " << this->second_int << std::endl;
 }
