@@ -5,16 +5,15 @@ class Test
 {
 
 private:
-	int first;
-	int second;
+	int first_int;
+	int second_int;
 
-	
 
 public:
 	// default
 	Test()  {
-		this->first = 0;
-		this->second = 0;
+		this->first_int = 0;
+		this->second_int = 0;
 	} 
 
 	// with params
@@ -33,20 +32,23 @@ public:
 			exit(1);
 		}
 
-		this->first = first;
-		this->second = second;
+		this->first_int = first;
+		this->second_int = second;
 		
 	}
 
 	//Set first
-	void set_values(int first, int second);
+	
+	void set_first(int first);
+
+	void set_second(int second);
 
 	int get_first() {
-		return this->first;
+		return this->first_int;
 	}
 
 	int get_second() {
-		return this->second;
+		return this->second_int;
 	}
 
 	void print_fields();
@@ -57,7 +59,14 @@ public:
 
 	Test operator + (int second);
 
+	void operator ++();
+
+	void operator ++(int);
+
 	friend Test operator + (int, Test&);
+
+	
+
 
 };
 

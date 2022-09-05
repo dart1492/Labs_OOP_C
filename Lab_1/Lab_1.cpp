@@ -1,6 +1,4 @@
-﻿// Lab_1.cpp : Этот файл содержит функцию "main". Здесь начинается и заканчивается выполнение программы.
-//
-
+﻿
 #include <iostream>
 #include <vector>
 #include <cstdlib>
@@ -20,7 +18,8 @@ void change_vector(std::vector <Test> &objects_vect) {
         std::cout << "      Enter new values:" << std::endl;
         int new_first, new_second;
         std::cin >> new_first >> new_second;
-        objects_vect[y].set_values(new_first, new_second);
+        objects_vect[y].set_first(new_first);
+        objects_vect[y].set_second(new_second);
         std::cout << "      New values:"; objects_vect[y].print_fields();
     }
     else if (z == 2) {
@@ -49,7 +48,7 @@ void change_vector(std::vector <Test> &objects_vect) {
         change_vector(objects_vect);
     }
 
-    }
+ }
 
 
 int main()
@@ -97,15 +96,27 @@ int main()
     }
     
 
-            Test rad_1(3, 9);
-            Test rad_2(5, 16);
+    Test rad_1(3, 9);
+    Test rad_2(5, 16);
 
-            (rad_1 + rad_2).print_fields(); // obj + obj
+    (rad_1 + rad_2).print_fields(); // obj + obj
         
+    (rad_1 + 5).print_fields(); // obj + int     
 
-            (rad_1 + 5).print_fields(); // obj + int
+    (5 + rad_2).print_fields(); // int + obj
 
-            (5 + rad_2).print_fields(); // int + obj
+    ++rad_1; // postfix increment
+
+    rad_1.print_fields();
+
+    rad_1++; // suffix increment
+
+    rad_1.print_fields();
+
+     
+    
+
+    
     
 
 

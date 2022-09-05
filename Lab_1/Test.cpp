@@ -1,10 +1,10 @@
 #include "Test.h"
 
-void Test::set_values(int first, int second) {
 
+void Test::set_first(int first) {
 	try
 	{
-		if (second < first) {
+		if (this->second_int < first) {
 			std::string e = "first cant be bigger";
 			throw e;
 		}
@@ -16,17 +16,33 @@ void Test::set_values(int first, int second) {
 		exit(1);
 	}
 
-	this->first = first;
-	this->second = second;
+	this->first_int = first;
 }
 
+void Test::set_second(int second) {
+	try
+	{
+		if (second < this->first_int) {
+			std::string e = "first cant be bigger";
+			throw e;
+		}
+
+	}
+	catch (std::string e)
+	{
+		std::cout << e << std::endl;
+		exit(1);
+	}
+	
+	this->second_int = second;
+}
 
 void Test::print_fields() {
-	std::cout << this->first << " " << this->second << std::endl;
+	std::cout << this->first_int << " " << this->second_int << std::endl;
 }
 
 bool Test::check(int x) {
-	if (x >= this->first && x <= this->second) {
+	if (x >= this->first_int && x <= this->second_int) {
 		return true;
 	}
 	else {
@@ -48,3 +64,15 @@ Test operator+ (int first, Test& d1) {
 	Test res(d1.get_first() + first, d1.get_second() + first);
 	return res;
 }
+
+void Test::operator ++() {
+	++this->first_int;
+	++this->second_int ;
+}
+
+void Test::operator ++(int) { // int param indicates postfix
+	this->first_int++;
+	this->second_int++;
+}
+
+
