@@ -98,18 +98,19 @@ int main()
     Test rad_1(3, 9);
     Test rad_2(5, 16);
 
-    (rad_1 + rad_2).print_fields(); // obj + obj
+    std::cout << "rad_1:"; rad_1.print_fields();
+    std::cout << "rad_2:"; rad_2.print_fields();
+
+    std::cout << "rad_1 + rad_2:"; (rad_1 + rad_2).print_fields(); // obj + obj
         
-    (rad_1 + 5).print_fields(); // obj + int     
+    std::cout << "rad_1 + int:"; (rad_1 + 5).print_fields(); // obj + int     
 
-    (5 + rad_2).print_fields(); // int + obj
+    std::cout << "int + rad_2:"; (5 + rad_2).print_fields(); // int + obj
 
-    ++rad_1; // postfix increment
-
+    std::cout << "prefix increment:"; ++rad_1; // postfix increment
     rad_1.print_fields();
 
-    rad_1++; // suffix increment
-
+    std::cout << "postfix increment:"; rad_1++; // suffix increment
     rad_1.print_fields();
 
 }
