@@ -68,19 +68,21 @@ Test Test::operator + (int second) {
 	return res;
 }
 
-Test operator+ (int first, Test& d1) {
-	Test res(d1.get_first() + first, d1.get_second() + first);
+int operator+ (int first, Test& d1) {
+	int res = first + (d1.get_second() - d1.get_first());
 	return res;
 }
 
-void Test::operator ++() {
+Test Test::operator ++() {
 	++this->first_int;
-	++this->second_int ;
+	++this->second_int;
+	return *this;
 }
 
-void Test::operator ++(int) { // int param indicates postfix
+Test Test::operator ++(int) { // int param indicates postfix
 	this->first_int++;
 	this->second_int++;
+	return *this;
 }
 
 

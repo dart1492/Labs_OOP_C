@@ -49,11 +49,11 @@ public:
 
 	Test operator + (int second);
 
-	friend Test operator + (int, Test&);
+	friend int operator + (int, Test&);
 
-	void operator ++();
+	Test operator ++();
 
-	void operator ++(int);
+	Test operator ++(int);
 };
 
 

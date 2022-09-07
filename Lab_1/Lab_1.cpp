@@ -105,12 +105,13 @@ int main()
         
     std::cout << "rad_1 + int:"; (rad_1 + 5).print_fields(); // obj + int     
 
-    std::cout << "int + rad_2:"; (5 + rad_2).print_fields(); // int + obj
+    std::cout << "int + rad_2:" << (5 + rad_2) << std::endl;
 
-    std::cout << "prefix increment:"; ++rad_1; // postfix increment
-    rad_1.print_fields();
-
-    std::cout << "postfix increment:"; rad_1++; // suffix increment
+    
+    std::cout << "inintial rad_1: " << rad_1.get_first() << " " << rad_1.get_second() << std::endl;
+    std::cout << "rad_1 with prefix increment: " << (++rad_1).get_first() << " " << (rad_1).get_second() << std::endl; // postfix increment
+    std::cout << "rad_1 with postfix increment: " << (rad_1++).get_first() << " " << (rad_1).get_second() << std::endl;
+    
     rad_1.print_fields();
 
 }
