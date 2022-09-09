@@ -74,15 +74,16 @@ int operator+ (int first, Test& d1) {
 }
 
 Test Test::operator ++() {
-	++this->first_int;
-	++this->second_int;
+	first_int++;
+	second_int++;
 	return *this;
 }
 
 Test Test::operator ++(int) { // int param indicates postfix
+	Test prev = *this;
 	this->first_int++;
 	this->second_int++;
-	return *this;
+	return prev;
 }
 
 

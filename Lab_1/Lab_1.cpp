@@ -112,7 +112,7 @@ int main()
     std::cout << "rad_1 with prefix increment: " << (++rad_1).get_first() << " " << (rad_1).get_second() << std::endl; // postfix increment
     std::cout << "rad_1 with postfix increment: " << (rad_1++).get_first() << " " << (rad_1).get_second() << std::endl;
     
-    rad_1.print_fields();
+  
 
 }
 
