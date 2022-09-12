@@ -74,8 +74,8 @@ int operator+ (int first, Test& d1) {
 }
 
 Test Test::operator ++() {
-	first_int++;
-	second_int++;
+	++first_int;
+	++second_int;
 	return *this;
 }
 

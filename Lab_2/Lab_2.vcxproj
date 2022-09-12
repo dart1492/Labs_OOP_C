@@ -127,7 +127,11 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Cus_arr.cpp" />
     <ClCompile Include="Lab_2.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Cus_arr.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
