@@ -10,30 +10,26 @@ private:
 	int* arr;
 
 public:
-	Cus_arr(std::string name, int size) {
-		this->name = name;
-		this->size = size;
-		this->arr = new int(size);
 
-		std::cout << "Parametrized constructor called..." << std::endl;
-	}
+	Cus_arr(std::string name, int size);
 
-	Cus_arr() {
-		this->name = "default";
-		this->size = 0;
-		this->arr = nullptr;
+	Cus_arr();
 
-		std::cout << "Default constructor called..." << std::endl;
-	}
+	Cus_arr(const Cus_arr &obj);
 
-	~Cus_arr() {
-		if (this->size != 0) {
-			delete[] arr;
-			this->size = 0;
-			this->arr = nullptr;
-		}
+	~Cus_arr();
 
-		std::cout << "Destructor called..." << std::endl;
-	}
+	int len();
+
+	int& operator[](int);
+
+	Cus_arr operator+(Cus_arr second);
+
+	Cus_arr operator = (Cus_arr test);
+
+	friend std::ostream& operator <<(std::ostream& output, Cus_arr& obj);
+
+	friend std::istream& operator >>(std::istream& output, Cus_arr& obj);
 };
+
 
