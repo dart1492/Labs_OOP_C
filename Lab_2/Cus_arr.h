@@ -20,6 +20,8 @@ public:
 	~Cus_arr();
 
 	int len();
+	
+	Cus_arr next();
 
 	int& operator[](int);
 

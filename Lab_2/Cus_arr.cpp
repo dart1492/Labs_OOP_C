@@ -24,7 +24,7 @@ Cus_arr::Cus_arr(const Cus_arr& obj) {
 	}
 
 	this->name = obj.name + " copy";
-	
+	std::cout << this->name << " obj" << " copy constructor called..." << std::endl;
 }
 
 Cus_arr::~Cus_arr() {
@@ -103,4 +103,23 @@ std::istream& operator >>(std::istream& input, Cus_arr& Arr) { //перевантаження 
 	return input;
 }
 
+Cus_arr Cus_arr::next() {
+	
+	
+	for (int i = 0; i < this->size; ++i) {
+		this->arr[i]++;
+	}
+	return *this;
+
+}
+
+/*Cus_arr Cus_arr::next() {
+
+	Cus_arr NewArray = *this;
+	for (int i = 0; i < this->size; ++i) {
+		NewArray.arr[i]++;
+	}
+	return NewArray;
+
+}*/
 
