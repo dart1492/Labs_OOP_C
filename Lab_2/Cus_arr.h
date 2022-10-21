@@ -6,7 +6,7 @@ class Cus_arr
 {
 private:
 	std::string name;
-	int size;
+	int size; 
 	int* arr;
 
 public:
@@ -21,7 +21,7 @@ public:
 
 	int len();
 	
-	Cus_arr next();
+	Cus_arr& next();
 
 	int& operator[](int);
 

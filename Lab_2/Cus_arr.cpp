@@ -103,7 +103,7 @@ std::istream& operator >>(std::istream& input, Cus_arr& Arr) { //перевантаження 
 	return input;
 }
 
-Cus_arr Cus_arr::next() {
+Cus_arr& Cus_arr::next() {
 	
 	
 	for (int i = 0; i < this->size; ++i) {
